@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Custom animations (already in tailwind.config.ts now) */
+/* @keyframes pulse-slow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 30s ease-in-out infinite;
+  background-size: 200% 200%;
+} */
+
+/* Removed app-container, futuristic-bg, glass-card, premium-button, youtube-header, youtube-logo, logo-icon, balance-display, bottom-nav, nav-items, nav-item, input-field as they are handled by components or Tailwind classes */
+
+/* Custom checkbox styling */
+input[type="checkbox"] {
+  /* Hide default checkbox */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Custom styling */
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6b7280; /* gray-500 */
+  border-radius: 4px;
+  background-color: #1f2937; /* gray-800 */
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #dc2626; /* red-600 */
+  border-color: #dc2626; /* red-600 */
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.3); /* red-600 with opacity */
+}
+
+/* Removed video-card, video-placeholder, vote-buttons, vote-button, like-button, dislike-button, paypal-bg, choice-button, choice-icon, vsl-placeholder, play-icon, stage-container, vsl-video-container, timer-display as they are handled by components or Tailwind classes */
